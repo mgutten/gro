@@ -1,5 +1,550 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.body {
+  text-align: center;
+}
+
+.checkout-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+html.w-mod-js *[data-ix="slide-up-on-page-load"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, 40px);
+  -ms-transform: translate(0px, 40px);
+  transform: translate(0px, 40px);
+}
+
+html.w-mod-js *[data-ix="fade-in-on-page-load"] {
+  opacity: 0;
+}
+
+html.w-mod-js *[data-ix="slide-in-on-scroll"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, 40px);
+  -ms-transform: translate(0px, 40px);
+  transform: translate(0px, 40px);
+}
+
+html.w-mod-js *[data-ix="scale-in-on-scroll"] {
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+@media (max-width: 767px) {
+  .hero-container {
+    position: relative;
+    height: 100vh;
+    background-image: -webkit-radial-gradient(circle farthest-corner at 50% 100%, #fffbf7, #ffead0 52%);
+    background-image: radial-gradient(circle farthest-corner at 50% 100%, #fffbf7, #ffead0 52%);
+    text-align: center;
+  }
+  .tagline {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 65px;
+    color: #f76f8e;
+    font-weight: 700;
+    text-align: center;
+  }
+  .body {
+    background-color: #fff7ed;
+    font-family: 'Proxima Nova', sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .body.checkout {
+    min-height: 100vh;
+    padding-bottom: 0px;
+  }
+  .cta {
+    margin-top: 26px;
+    margin-bottom: 0px;
+    padding: 17px 25px 15px;
+    border: 2px solid #f76f8e;
+    background-color: rgba(16, 23, 29, 0);
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    color: #f76f8e;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .cta:active {
+    background-color: #f76f8e;
+    color: #ffead0;
+  }
+  .cta.lower {
+    margin-top: 30px;
+  }
+  .cta.send {
+    margin-top: 0px;
+    padding-top: 13px;
+    padding-bottom: 11px;
+    font-size: 18px;
+  }
+  .cta.benefits-cta {
+    margin-top: 23px;
+    margin-bottom: 8px;
+  }
+  .hero-img {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    -webkit-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+  }
+  .nav {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+  }
+  .seen-on {
+    height: 56px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #eee;
+  }
+  .glamour {
+    margin-left: 35px;
+  }
+  .benefits-container {
+    position: static;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background-color: #fffbf7;
+    text-align: center;
+  }
+  .benefits-container.colored {
+    overflow: hidden;
+    background-color: #d1d1d1;
+    background-image: -webkit-radial-gradient(circle farthest-corner at 50% 100%, #ffca82, #ffead0 58%);
+    background-image: radial-gradient(circle farthest-corner at 50% 100%, #ffca82, #ffead0 58%);
+  }
+  .benefit-header {
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #3a3335;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .benefits-text {
+    display: inline-block;
+    width: 80%;
+    margin-top: 10px;
+    color: #3a3335;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+  }
+  .benefits-img {
+    margin-top: 29px;
+  }
+  .testimonials-container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #fffbf7;
+  }
+  .review-container {
+    display: inline-block;
+    width: 80%;
+    margin-left: 68px;
+    text-align: left;
+  }
+  .review-img {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    float: left;
+    border-radius: 50%;
+  }
+  .review-outer-container {
+    margin-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .star {
+    display: inline-block;
+  }
+  .review-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #3a3335;
+    text-align: left;
+  }
+  .review-text {
+    color: #3a3335;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: left;
+  }
+  .cta-container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #ffead0;
+    text-align: center;
+  }
+  .review-date {
+    display: inline-block;
+    color: #bbb;
+    line-height: 26px;
+    text-align: left;
+  }
+  .cta-header {
+    margin-top: 0px;
+    color: #3a3335;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .cta-header.community-header {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .community-container {
+    padding: 50px 10px 30px;
+    background-color: #fffbf7;
+    text-align: center;
+  }
+  .question {
+    margin-bottom: 0px;
+    color: #3a3335;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 300;
+    text-transform: none;
+  }
+  .question.checkout {
+    font-size: 22px;
+  }
+  .community-name-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .community-input {
+    background-color: #fffbf7;
+  }
+  .footer-container {
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #3a3335;
+  }
+  .footer-container.checkout {
+    position: absolute;
+    background-color: #f2eae1;
+  }
+  .footer-text {
+    color: #fff;
+    line-height: 20px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: none;
+  }
+  .footer-text.checkout {
+    color: #3a3335;
+  }
+  .input {
+    background-color: #fffbf7;
+  }
+  .benefits-list {
+    display: inline-block;
+    width: 80%;
+    margin-top: 10px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    text-align: left;
+  }
+  .item {
+    padding-bottom: 10px;
+  }
+  .tagline-sub {
+    margin-top: 25px;
+    color: #3a3335;
+    font-size: 21px;
+    font-weight: 300;
+  }
+  .checkout-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .free {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .progress-container {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .progress-text {
+    display: inline-block;
+    padding: 4px 5px 2px 10px;
+    float: left;
+    background-color: #f2eae1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .progress-text.active {
+    float: left;
+    background-color: #f76f8e;
+    color: #fff7ed;
+  }
+  .progress-arrow {
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    display: inline-block;
+    width: 15px;
+    height: 26px;
+    margin-top: 0px;
+    padding-top: 0px;
+    float: left;
+  }
+  .progress-step {
+    margin-left: -6px;
+    float: left;
+  }
+  .container {
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #3a3335;
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  .answer-container {
+    margin-top: 10px;
+  }
+  .answer-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 17px 26px 16px;
+    border: 2px solid #3a3335;
+    background-color: transparent;
+    color: #3a3335;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .contact {
+    color: #3a3335;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-container {
+    -webkit-transition: height 9999999ms ease;
+    transition: height 9999999ms ease;
+  }
+  .tagline {
+    padding-top: 45px;
+    font-size: 33px;
+    line-height: 39px;
+  }
+  .body.checkout {
+    min-height: 100vh;
+    padding-bottom: 0px;
+  }
+  .cta {
+    margin-top: 22px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 21px;
+  }
+  .cta.benefits-cta {
+    margin-top: 25px;
+    margin-bottom: 6px;
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+  .seen-on {
+    height: 50px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-image: -webkit-linear-gradient(270deg, #f1f1f1, #f1f1f1);
+    background-image: linear-gradient(180deg, #f1f1f1, #f1f1f1);
+  }
+  .simple {
+    padding-top: 2px;
+    padding-right: 0px;
+  }
+  .glamour {
+    margin-left: 35px;
+  }
+  .glamour.shape {
+    display: none;
+  }
+  .glamour.womans {
+    display: none;
+  }
+  .benefits-container {
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .benefit-header {
+    font-size: 31px;
+    line-height: 40px;
+  }
+  .benefits-text {
+    width: 100%;
+  }
+  .review-container {
+    width: 100%;
+    margin-left: 0px;
+    text-align: left;
+  }
+  .review-img {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 0px;
+    padding-right: 0px;
+    float: left;
+  }
+  .review-outer-container {
+    position: relative;
+    padding-right: 10px;
+    padding-left: 15px;
+  }
+  .rating-stars {
+    display: inline-block;
+    text-align: left;
+  }
+  .star {
+    display: inline-block;
+  }
+  .review-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    text-align: left;
+  }
+  .review-text {
+    text-align: left;
+  }
+  .cta-container {
+    padding-top: 50px;
+  }
+  .review-date {
+    display: block;
+    float: none;
+  }
+  .cta-header.community-header {
+    margin-top: 6px;
+  }
+  .footer-container {
+    position: relative;
+  }
+  .footer-container.checkout {
+    position: absolute;
+    background-color: #f2eae1;
+  }
+  .footer-text {
+    letter-spacing: 1px;
+  }
+  .footer-text.checkout {
+    color: #3a3335;
+  }
+  .benefits-list {
+    width: 100%;
+    margin-top: 13px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+  }
+  .item {
+    padding-bottom: 10px;
+  }
+  .tagline-sub {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 21px;
+  }
+  ._1-3 {
+    width: 33%;
+    height: 33%;
+  }
+  .progress-container {
+    margin-top: 5px;
+  }
+  .progress-text {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    padding-left: 7px;
+    color: #3a3335;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .progress-text.last {
+    padding-right: 4px;
+    padding-left: 2px;
+  }
+  .progress-arrow {
+    display: inline-block;
+  }
+  .progress-step {
+    display: inline-block;
+    margin-left: -8px;
+  }
+  .progress-step.first {
+    margin-left: 0px;
+  }
+  .title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  .contact {
+    color: #3a3335;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }

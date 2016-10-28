@@ -1,0 +1,15 @@
+.progress-step.active .progress-text {
+  color: #fff7ed;
+  background-color: #F76F8E;
+}
+
+.progress-step.active svg polygon,
+.progress-step.active svg path {
+  fill: #F76F8E;
+}
+
+@media (max-width: 320px) {
+  .progress-container .progress-step {
+    margin-left: -10px;
+  }
+}

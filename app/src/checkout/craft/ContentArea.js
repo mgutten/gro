@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Question from './craft/Question.js';
+import Question from './Question.js';
 
 class ContentArea extends Component {
   getContentComponent() {
-    return <Question name="hairType" />;
+    return <Question name="moisture" />;
   };
 
   render() {

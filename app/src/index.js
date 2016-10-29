@@ -1,10 +1,11 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// import { Provider } from 'react-redux';
+// import store from './store';
+import router from './router';
 import './webflow.css';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  router,
   document.getElementById('root')
 );

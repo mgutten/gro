@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Answer from './Answer.js';
-import Button from '../Button.js';
+import Button from '../../global/Button.js';
 
 const questions = {
-  hairType: {
+  moisture: {
     question: "What's your hair type?",
     answers: [
       'Dry',

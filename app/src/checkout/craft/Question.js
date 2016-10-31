@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
-import Answer from './Answer.js';
-import Button from '../../global/Button.js';
-
-const questions = {
-  moisture: {
-    question: "What's your hair type?",
-    answers: [
-      'Dry',
-      'Normal',
-      'Oily'
-    ]
-  },
-  type: 'single'
-};
+import Answer from './Answer';
+import Button from '../../global/Button';
 
 class Question extends Component {
 
+  toggleAnswer(selected, value) {
+    this.props.answerClick(selected, this.props.id, value)
+  }
+
+  disabled() {
+    return this.props.selected.constructor === Array
+      ? this.props.selected.length <= 0
+      : !this.props.selected;
+  }
+
   render() {
-    const question = questions[this.props.name];
+    let selected = value => this.props.selected.includes(value);
 
     return (
       <div>
-        <h2 className="checkout question">{question.question}</h2>
+        <h2 className="checkout question">{this.props.question}</h2>
         <div className="answer-container">
-          {question.answers.map((value) => <Answer value={value} key={value} />)}
+          {this.props.answers.map((value) => <Answer  value={value}
+                                                      key={value}
+                                                      selected={selected(value)}
+                                                      onClick={this.toggleAnswer.bind(this)} />
+                                  )}
         </div>
-        <Button text="Continue" />
+        <Button text="Continue" submit={this.props.next} disabled={this.disabled()} />
       </div>
     );
   }

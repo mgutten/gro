@@ -6,8 +6,9 @@ class Button extends Component {
     return (
       <button
         className="button w-clearfix"
-        href="#"
-        disabled>
+        onClick={this.props.submit}
+        disabled={this.props.disabled}
+        >
         {this.props.text}
       </button>
     );

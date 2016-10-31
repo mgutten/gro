@@ -13,9 +13,6 @@ export default (
       <Route path="checkout" component={MainCheckoutLayout}>
         <IndexRedirect to="craft" />
         <Route path="craft" component={CraftContentArea} />
-        // <Route path="delivery" component={CraftContentArea} />
-        // <Route path="payment" component={CraftContentArea} />
-        // <Route path="thanks" component={CraftContentArea} />
       </Route>
     </Route>
   </Router>

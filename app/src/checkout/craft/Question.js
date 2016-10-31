@@ -5,7 +5,11 @@ import Button from '../../global/Button';
 class Question extends Component {
 
   toggleAnswer(selected, value) {
-    this.props.answerClick(selected, this.props.id, value)
+    this.props.answerClick(selected, this.props.id, value, this.allowMultiple())
+  }
+
+  allowMultiple() {
+    return this.props.type === 'multi';
   }
 
   disabled() {

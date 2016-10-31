@@ -63,12 +63,13 @@ let next = () => ({
   type: 'NEXT_STEP'
 })
 
-let answerClick = function(selected, question, value) {
+let answerClick = function(selected, question, value, allowMultiple) {
   return {
     type: 'TOGGLE_ANSWER',
     selected: selected,
     question: question,
-    value: value
+    value: value,
+    allowMultiple: allowMultiple
   }
 }
 
@@ -81,8 +82,8 @@ let mapStateToProps = state => ({
 
 let mapDispatchToProps = dispatch => ({
   next: () => dispatch(next()),
-  answerClick: (selected, question, value) => {
-    dispatch(answerClick(selected, question, value));
+  answerClick: (selected, question, value, allowMultiple) => {
+    dispatch(answerClick(selected, question, value, allowMultiple));
   }
 })
 

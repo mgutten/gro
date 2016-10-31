@@ -1,5 +1,5 @@
 .answer-btn {
-  transition: background-color 400ms ease, border-color 400ms ease;
+  transition: background-color 300ms ease, border-color 300ms ease;
 }
 .answer-btn.active {
   color: #fff7ed;

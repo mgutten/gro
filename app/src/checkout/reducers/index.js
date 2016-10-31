@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import * as fn from './functions'
 
 const initialState = {
   craftIndex: 0,
@@ -12,27 +12,10 @@ const checkoutReducer = function(state = initialState, action) {
   switch(action.type) {
 
     case 'NEXT_STEP':
-      return {
-        ...state,
-        craftIndex: state.craftIndex + 1
-      };
+      return fn.nextStep(state, action);
 
     case 'TOGGLE_ANSWER':
-
-      let newState = {
-        ...state
-      };
-
-      let answers = newState[action.question];
-
-      if (action.selected) {
-        // Currently selected, remove value
-        newState[action.question] = _.without(answers, action.value);
-      } else {
-        newState[action.question] = answers.concat([action.value]);
-      }
-
-      return newState;
+      return fn.toggleAnswer(state, action);
 
     default:
       return state;

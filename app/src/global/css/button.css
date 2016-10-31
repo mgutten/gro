@@ -1,16 +1,16 @@
 .button {
   display: inline-block;
   margin-top: 30px;
-  padding: 17px 25px 15px;
-  width: 100%;
+  padding: 17px 30px 15px;
   font-size: 22px;
   letter-spacing: 1.5px;
   text-align: center;
   text-transform: uppercase;
-  color: #73BA9B;
+  color: #fff;
+  border-radius: 30px;
   border: 2px solid #73BA9B;
   opacity: 1;
-  background: transparent;
+  background: #73BA9B;
   text-decoration: none;
   transform: translateY(0px);
   transition: transform 300ms ease;

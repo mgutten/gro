@@ -16,7 +16,10 @@ const craftOrder = [
   {
     id: 'boosts',
     question: "What boosts do you want?",
+    description: "Choose up to three",
     answers: [
+      'Growth',
+      'Color Protection',
       'Dandruff',
       'Anti-frizz',
       'Other'
@@ -44,6 +47,7 @@ class ContentArea extends Component {
     return (
       <section className="content-area container">
         <Question question={currentQuestion.question}
+                  description={currentQuestion.description}
                   id={currentQuestion.id}
                   answers={currentQuestion.answers}
                   selected={selected}

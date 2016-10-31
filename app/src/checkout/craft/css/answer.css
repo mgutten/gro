@@ -1,9 +1,14 @@
 .answer-btn {
   transition: background-color 400ms ease, border-color 400ms ease;
 }
-
 .answer-btn.active {
   color: #fff7ed;
   background: #F76F8E;
   border-color: #F76F8E;
+}
+.question-container h4 {
+  margin: 0;
+  color: #9E9993;
+  font-weight: normal;
+  font-style: italic;
 }

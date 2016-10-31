@@ -57,8 +57,9 @@ html.w-mod-js *[data-ix="scale-in-on-scroll"] {
     font-weight: 400;
   }
   .body.checkout {
+    position: relative;
     min-height: 100vh;
-    padding-bottom: 0px;
+    padding-bottom: 110px;
   }
   .cta {
     margin-top: 26px;
@@ -343,9 +344,9 @@ html.w-mod-js *[data-ix="scale-in-on-scroll"] {
     width: 80%;
     margin-top: 15px;
     padding: 17px 26px 16px;
-    border: 2px solid #3a3335;
+    border: 2px solid #9E9993;
     background-color: transparent;
-    color: #3a3335;
+    color: #9E9993;
     font-size: 22px;
     font-weight: 400;
   }
@@ -364,10 +365,6 @@ html.w-mod-js *[data-ix="scale-in-on-scroll"] {
     padding-top: 45px;
     font-size: 33px;
     line-height: 39px;
-  }
-  .body.checkout {
-    min-height: 100vh;
-    padding-bottom: 0px;
   }
   .cta {
     margin-top: 22px;

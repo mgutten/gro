@@ -3,7 +3,7 @@ import _ from 'underscore'
 const initialState = {
   craftIndex: 0,
   moisture: [],
-  boosts: [],
+  boosts: ['Growth'],
   fragrance: []
 };
 

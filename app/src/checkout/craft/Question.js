@@ -14,12 +14,20 @@ class Question extends Component {
       : !this.props.selected;
   }
 
+  description() {
+    if (!this.props.description)
+      return '';
+
+    return <h4>{this.props.description}</h4>;
+  }
+
   render() {
     let selected = value => this.props.selected.includes(value);
 
     return (
-      <div>
+      <div className="question-container">
         <h2 className="checkout question">{this.props.question}</h2>
+        {this.description()}
         <div className="answer-container">
           {this.props.answers.map((value) => <Answer  value={value}
                                                       key={value}

@@ -8,6 +8,10 @@ class Question extends Component {
     this.props.answerClick(selected, this.props.id, value, this.allowMultiple())
   }
 
+  next() {
+    this.props.next(this.props.nextUrl);
+  }
+
   allowMultiple() {
     return this.props.type === 'multi';
   }
@@ -39,7 +43,7 @@ class Question extends Component {
                                                       onClick={this.toggleAnswer.bind(this)} />
                                   )}
         </div>
-        <Button text="Continue" submit={this.props.next} disabled={this.disabled()} />
+        <Button text="Continue" submit={this.next.bind(this)} disabled={this.disabled()} />
       </div>
     );
   }

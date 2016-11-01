@@ -1,10 +1,16 @@
+import { browserHistory } from 'react-router'
 import _ from 'underscore'
 
 export const nextStep = function(state, action) {
-  return {
-    ...state,
-    craftIndex: state.craftIndex + 1
+  let newState = {
+    ...state
   };
+
+  // Save user info
+
+  browserHistory.push(action.url);
+
+  return newState;
 };
 
 export const toggleAnswer = function(state, action) {

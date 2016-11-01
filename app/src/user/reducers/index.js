@@ -1,29 +1,22 @@
-const initialState = {
-  users: [],
-  userProfile: {
-    repos: []
-  }
+import * as fn from './functions'
+
+let initialState = {
+  moisture: [],
+  boosts: ['Growth'],
+  fragrance: []
 };
 
 const userReducer = function(state = initialState, action) {
 
   switch(action.type) {
 
-    case types.GET_USERS_SUCCESS:
-      return Object.assign({}, state, { users: action.users });
+    case 'TOGGLE_ANSWER':
+      return fn.toggleAnswer(state, action);
 
-    case types.DELETE_USER_SUCCESS:
-
-      // Use lodash to create a new user array without the user we want to remove
-      const newUsers = _.filter(state.users, user => user.id != action.userId);
-      return Object.assign({}, state, { users: newUsers });
-
-    case types.USER_PROFILE_SUCCESS:
-      return Object.assign({}, state, { userProfile: action.userProfile });
+    default:
+      return state;
 
   }
-
-  return state;
 
 }
 

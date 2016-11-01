@@ -79,10 +79,9 @@ let answerClick = function(selected, question, value, allowMultiple) {
 }
 
 let mapStateToProps = state => ({
-  craftIndex: state.checkout.craftIndex,
-  moisture: state.checkout.moisture,
-  fragrance: state.checkout.fragrance,
-  boosts: state.checkout.boosts
+  moisture: state.user.moisture,
+  fragrance: state.user.fragrance,
+  boosts: state.user.boosts
 })
 
 let mapDispatchToProps = dispatch => ({

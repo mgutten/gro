@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import _ from 'underscore';
 
 export const toggleAnswer = function(state, action) {
   let newState = {
@@ -17,6 +17,16 @@ export const toggleAnswer = function(state, action) {
     newState[action.question] = _.without(answers, action.value);
   else
     newState[action.question] = answers.concat([action.value]);
+
+  return newState;
+};
+
+export const setUserValue = function(state, action) {
+  let newState = {
+    ...state
+  };
+
+  newState[action.key] = action.value;
 
   return newState;
 };

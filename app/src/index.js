@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import router from './router';
 import './init/analytics';
+import './init/user';
 import './global/css/webflow.css';
 import './global/css/index.css';
 

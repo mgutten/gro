@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import Question from './Question.js';
 
 const craftOrder = {
@@ -37,7 +37,7 @@ const craftOrder = {
       'Other'
     ],
     type: 'single',
-    nextUrl: '/checkout/delivery'
+    nextUrl: '/checkout/craft/email'
   }
 };
 

@@ -1,4 +1,4 @@
-import * as fn from './functions'
+import * as fn from './functions';
 
 let initialState = {
   moisture: [],
@@ -12,6 +12,9 @@ const userReducer = function(state = initialState, action) {
 
     case 'TOGGLE_ANSWER':
       return fn.toggleAnswer(state, action);
+
+    case 'SET_USER':
+      return fn.setUserValue(state, action);
 
     default:
       return state;

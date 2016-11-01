@@ -1,0 +1,8 @@
+.no-thanks {
+  display: inline-block;
+  margin-top: 10px;
+  color: #9E9993;
+}
+.no-thanks.hidden {
+  display: none;
+}

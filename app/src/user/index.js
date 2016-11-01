@@ -1,10 +1,38 @@
-import firebase from 'firebase'
+import firebase from 'firebase';
+import store from '../store.js';
 
 class User {
 
+  firebaseUrl() {
+    return process.env.NODE_ENV + '/users/' + this.id()
+  }
+
   save(data) {
     data.updatedAt = new Date().toLocaleString();
-    firebase.database().ref(process.env.NODE_ENV + '/users/' + this.id()).set(data);
+    firebase.database().ref(this.firebaseUrl()).set(data);
+  }
+
+  fetch() {
+    return firebase.database().ref(this.firebaseUrl()).once('value').then(function(snapshot) {
+
+      let data = snapshot.val();
+
+      if (snapshot.val()) {
+        // User already exists w/ data, populate to store
+        for (var key in data) {
+
+          if (data.hasOwnProperty(key)) {
+
+            store.dispatch({
+              type: 'SET_USER',
+              key: key,
+              value: data[key]
+            });
+
+          }
+        }
+      }
+    });
   }
 
   id() {

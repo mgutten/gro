@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import store from '../../store';
 import Button from '../../global/Button';
 import Input from '../../global/Input';
 import './css/email-content-area.css';
@@ -20,6 +21,18 @@ class EmailContentArea extends Component {
       classNames += ' hidden';
 
     return classNames;
+  }
+
+  updateProgressBar() {
+    store.dispatch({
+      type: 'UPDATE_PROGRESS',
+      step: 'craft',
+      stepTitle: 'Craft your perfect bottle'
+    });
+  }
+
+  componentWillMount() {
+    this.updateProgressBar();
   }
 
   render() {

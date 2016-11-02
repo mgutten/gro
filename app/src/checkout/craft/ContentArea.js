@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import store from '../../store';
 import Question from './Question.js';
 
 const craftOrder = {
@@ -42,6 +43,18 @@ const craftOrder = {
 };
 
 class ContentArea extends Component {
+
+  updateProgressBar() {
+    store.dispatch({
+      type: 'UPDATE_PROGRESS',
+      step: 'craft',
+      stepTitle: 'Craft your perfect bottle'
+    });
+  }
+
+  componentWillMount() {
+    this.updateProgressBar();
+  }
 
   render() {
     let currentQuestion = craftOrder[this.props.params.question];

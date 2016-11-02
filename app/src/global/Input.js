@@ -5,7 +5,6 @@ class Input extends Component {
 
   render() {
     const _onChange = this.props.onChange;
-    console.log(this.props.default);
 
     return (
       <input
@@ -13,6 +12,7 @@ class Input extends Component {
         onChange={(e) => _onChange(e.target.value)}
         value={this.props.default}
         placeholder={this.props.placeholder}
+        className={this.props.className}
         />
     );
   }

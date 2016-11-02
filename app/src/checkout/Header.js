@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ProgressBar from './progress-bar/ProgressBar.js';
 
 class Header extends Component {
@@ -6,7 +7,7 @@ class Header extends Component {
     return (
       <section className="header">
         <div className="container">
-          <h1 className="title">Craft your perfect shampoo</h1>
+          <h1 className="title">{this.props.stepTitle}</h1>
         </div>
         <ProgressBar />
       </section>
@@ -14,4 +15,8 @@ class Header extends Component {
   }
 }
 
-export default Header;
+let mapStateToProps = state => ({
+  stepTitle: state.checkout.stepTitle
+})
+
+export default connect(mapStateToProps)(Header);

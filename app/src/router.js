@@ -8,6 +8,7 @@ import MainCheckoutLayout from './checkout/layouts/MainCheckoutLayout';
 // Pages
 import CraftContentArea from './checkout/craft/ContentArea';
 import EmailContentArea from './checkout/craft/EmailContentArea';
+import DeliveryContentArea from './checkout/delivery/DeliveryContentArea';
 
 export default (
   <Router history={browserHistory} onUpdate={ga.trackPageview}>
@@ -19,6 +20,7 @@ export default (
           <Route path="email" component={EmailContentArea} />
           <Route path=":question" component={CraftContentArea} />
         </Route>
+        <Route path="delivery" component={DeliveryContentArea} />
       </Route>
     </Route>
   </Router>

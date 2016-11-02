@@ -1,6 +1,9 @@
 import * as fn from './functions'
 
-const initialState = {};
+const initialState = {
+  step: 'craft',
+  stepTitle: 'Craft your perfect bottle'
+};
 
 const checkoutReducer = function(state = initialState, action) {
 
@@ -8,6 +11,9 @@ const checkoutReducer = function(state = initialState, action) {
 
     case 'NEXT_STEP':
       return fn.nextStep(state, action);
+
+    case 'UPDATE_PROGRESS':
+      return fn.updateProgress(state, action);
 
     default:
       return state;

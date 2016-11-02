@@ -32,7 +32,7 @@ class Step extends Component {
   };
 
   isActive() {
-    return this.props.step === '1';
+    return this.props.selected;
   };
 
   render() {

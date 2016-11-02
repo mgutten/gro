@@ -15,3 +15,11 @@ export const nextStep = function(state, action) {
 
   return newState;
 };
+
+export const updateProgress = function(state, action) {
+  return {
+    ...state,
+    step: action.step,
+    stepTitle: action.stepTitle
+  };
+};

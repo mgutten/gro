@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import store from '../../store'
+import store from '../../store';
 import Button from '../../global/Button';
 import Input from '../../global/Input';
 import BottleDescription from './BottleDescription';
@@ -14,7 +14,7 @@ let cc = '',
     expireMonth = '',
     expireYear = '';
 
-class DeliveryContentArea extends Component {
+class PaymentContentArea extends Component {
 
   months() {
     return <select name="month" className="half" onChange={(e) => this.onExpireMonthChange(e.target.value)}>
@@ -79,7 +79,7 @@ class DeliveryContentArea extends Component {
   render() {
 
     return (
-      <section className="content-area container delivery-container">
+      <section className="content-area container payment-container">
         <h2 className="checkout question">Order Summary</h2>
 
         <div className="description-container w-clearfix">
@@ -126,4 +126,4 @@ let mapDispatchToProps = dispatch => ({
   next: () => dispatch(next())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(DeliveryContentArea);
+export default connect(mapStateToProps, mapDispatchToProps)(PaymentContentArea);

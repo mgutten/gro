@@ -10,6 +10,7 @@ import CraftContentArea from './checkout/craft/ContentArea';
 import EmailContentArea from './checkout/craft/EmailContentArea';
 import DeliveryContentArea from './checkout/delivery/DeliveryContentArea';
 import PaymentContentArea from './checkout/payment/PaymentContentArea';
+import ErrorContentArea from './checkout/error/ErrorContentArea';
 
 export default (
   <Router history={browserHistory} onUpdate={ga.trackPageview}>
@@ -23,6 +24,7 @@ export default (
         </Route>
         <Route path="delivery" component={DeliveryContentArea} />
         <Route path="payment" component={PaymentContentArea} />
+        <Route path="error" component={ErrorContentArea} />
       </Route>
     </Route>
   </Router>

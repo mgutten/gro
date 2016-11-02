@@ -54,8 +54,8 @@ class ErrorContentArea extends Component {
     return (
       <section className="content-area container error-container">
         {this.sadFace()}
-        <h2 className="checkout question">Don't you hate it when you run out of shampoo?</h2>
-      <h4 style={{marginTop: '20px', fontWeight: '300'}}>Unfortunately, we're temporarily out of stock.  We're growing fast, so we'll contact you when our next batch is ready.</h4>
+        <h2 className="checkout question">Oh no! Don't you hate it when the shampoo runs out?</h2>
+      <h4 style={{marginTop: '20px', fontWeight: '300'}}>Your order has not been processed.  Unfortunately, we're temporarily out of stock.  We're growing fast, so we'll contact you when our next batch is ready.<br/>.<br/>Sorry for the inconvenience!</h4>
       </section>
     );
   }

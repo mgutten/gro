@@ -1,0 +1,14 @@
+.bottle-description-container {
+  margin-top: 15px;
+}
+.bottle-description-container:first-of-type {
+  margin-top: 0;
+}
+.bottle-description-container h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.bottle-description-container p {
+  margin: 0 0 5px;
+  padding-left: 20px;
+}

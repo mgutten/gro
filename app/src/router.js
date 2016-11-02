@@ -9,6 +9,7 @@ import MainCheckoutLayout from './checkout/layouts/MainCheckoutLayout';
 import CraftContentArea from './checkout/craft/ContentArea';
 import EmailContentArea from './checkout/craft/EmailContentArea';
 import DeliveryContentArea from './checkout/delivery/DeliveryContentArea';
+import PaymentContentArea from './checkout/payment/PaymentContentArea';
 
 export default (
   <Router history={browserHistory} onUpdate={ga.trackPageview}>
@@ -21,6 +22,7 @@ export default (
           <Route path=":question" component={CraftContentArea} />
         </Route>
         <Route path="delivery" component={DeliveryContentArea} />
+        <Route path="payment" component={PaymentContentArea} />
       </Route>
     </Route>
   </Router>

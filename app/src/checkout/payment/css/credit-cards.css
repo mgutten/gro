@@ -1,0 +1,9 @@
+.credit-cards-container {
+  padding-left: 10px;
+  text-align: left;
+}
+.credit-cards-container svg {
+  margin-right: 5px;
+  width: 40px;
+  height: auto;
+}

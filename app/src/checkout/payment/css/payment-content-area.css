@@ -1,0 +1,34 @@
+.description-container {
+  margin: 30px 0 30px 0;
+  text-align: left;
+}
+.bottle-container {
+  display: inline-block;
+  float: right;
+  width: 40%;
+}
+.bottle {
+  margin: 0 10%;
+  width: 30%;
+  float: left;
+}
+.total-container {
+  margin: 30px 0 30px 0;
+  padding: 10px;
+  background: #f2eae1;
+  text-align: left;
+}
+.total-container p,
+.total-container h4 {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+}
+.total-container p {
+  margin-top: 2px;
+}
+.total-container .total {
+  text-align: right;
+  float: right;
+  font-size: 20px;
+}

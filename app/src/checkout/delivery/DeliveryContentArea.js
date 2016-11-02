@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import store from '../../store'
 import Button from '../../global/Button';
 import Input from '../../global/Input';
-import './css/delivery-content-area.css';
 
 const nextUrl = '/checkout/payment';
 

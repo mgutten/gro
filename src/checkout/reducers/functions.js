@@ -1,4 +1,3 @@
-import { browserHistory } from 'react-router'
 import store from '../../store'
 import user from '../../user'
 import _ from 'underscore'
@@ -11,7 +10,7 @@ export const nextStep = function(state, action) {
   const userState = store.getState().user;
   user.save(userState);
 
-  browserHistory.push(action.url);
+  window.location.hash = action.url;
 
   return newState;
 };

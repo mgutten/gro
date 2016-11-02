@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.trygro.com/app",
+  "homepage": "https://www.trygro.com",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },

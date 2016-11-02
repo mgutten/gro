@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
+import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import ga from './analytics/ga'
 
 // Layouts
@@ -13,7 +13,7 @@ import PaymentContentArea from './checkout/payment/PaymentContentArea';
 import ErrorContentArea from './checkout/error/ErrorContentArea';
 
 export default (
-  <Router history={browserHistory} onUpdate={ga.trackPageview}>
+  <Router history={hashHistory} onUpdate={ga.trackPageview}>
     <Route path="/">
       <Route path="checkout" component={MainCheckoutLayout}>
         <IndexRedirect to="craft" />

@@ -60,6 +60,7 @@ class PaymentContentArea extends Component {
 
   submit() {
     if (this.valid()) {
+      this.props.finish();
       this.props.next();
     }
   }
@@ -116,6 +117,12 @@ let next = () => ({
   url: nextUrl
 })
 
+let finish = () => ({
+  type: 'SET_USER',
+  key: 'order',
+  value: true
+})
+
 let mapStateToProps = state => ({
   moisture: state.user.moisture,
   boosts: state.user.boosts,
@@ -123,7 +130,8 @@ let mapStateToProps = state => ({
 })
 
 let mapDispatchToProps = dispatch => ({
-  next: () => dispatch(next())
+  next: () => dispatch(next()),
+  finish: () => dispatch(finish())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(PaymentContentArea);

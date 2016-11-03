@@ -1,8 +1,8 @@
 import ReactGA from 'react-ga'
 
 ReactGA.trackPageview = function() {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
+  ReactGA.set({ page: window.location.hash });
+  ReactGA.pageview(window.location.hash);
 };
 
 export default ReactGA;

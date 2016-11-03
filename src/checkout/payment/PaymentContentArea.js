@@ -97,6 +97,7 @@ class PaymentContentArea extends Component {
           <p>Total (including tax and shipping)</p>
           <h4 className="total">$40</h4>
         </div>
+        <p className="satisfaction">SATISFACTION GUARANTEE<br/> We make the finest shampoo in the world, and we love it.  If you aren't completely satisfied for any reason, just return your bottle within 60 days for a full refund.</p>
 
         <CreditCards />
 

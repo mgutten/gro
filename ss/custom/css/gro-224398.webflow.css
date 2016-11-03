@@ -34,7 +34,7 @@ html.w-mod-js *[data-ix="scale-in-on-scroll"] {
   transform: scale(0.8, 0.8);
 }
 
-@media (max-width: 767px) {
+
   .hero-container {
     position: relative;
     height: 100vh;
@@ -353,7 +353,7 @@ html.w-mod-js *[data-ix="scale-in-on-scroll"] {
     color: #3a3335;
     font-weight: 300;
   }
-}
+
 
 @media (max-width: 479px) {
   .hero-container {

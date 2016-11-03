@@ -21,10 +21,11 @@ const craftOrder = {
     description: "Choose up to three",
     answers: [
       'Growth',
+      'Volume',
       'Color Protection',
       'Dandruff',
       'Anti-frizz',
-      'Other'
+      'Shine'
     ],
     type: 'multi',
     nextUrl: '/checkout/craft/fragrance'
@@ -35,7 +36,8 @@ const craftOrder = {
     answers: [
       'Citrus',
       'Floral',
-      'Other'
+      'Essential oils',
+      'Regular'
     ],
     type: 'single',
     nextUrl: '/checkout/craft/email'

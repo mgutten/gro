@@ -530,6 +530,15 @@ html.w-mod-js *[data-ix="scale-in-on-scroll"] {
   }
 }
 
+@media (max-width: 320px) {
+  .tagline {
+    padding-top: 35px;
+  }
+  .tagline-sub {
+    margin-top: 10px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url('../fonts/ProximaNova-Bold.otf') format('opentype');
